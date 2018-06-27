@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Juego_de_parejas</string>
+    <string name="title_activity_ruleta">Ruleta</string>
+    <string name="title_activity_juego">Juego</string>
+</resources>
