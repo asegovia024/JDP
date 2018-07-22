@@ -9,14 +9,20 @@ import android.view.View;
 
 public class Juego extends AppCompatActivity {
 
+    private Session session;//global variable
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juego);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        session.getusename();
 
 
     }
+
+
+
 
 }

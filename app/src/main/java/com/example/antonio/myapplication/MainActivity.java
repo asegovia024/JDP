@@ -8,11 +8,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.content.Context;
+
 
 public class MainActivity extends AppCompatActivity {
 
     Button empezar;
     public static final String MY_PREFS_NAME = "MyPrefsFile";
+
+    private Session session;//global variable
 
     DataGame juego;
     EditText p1, p2;
@@ -21,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        session = new Session(this); //in oncreate
 
         empezar=(Button)findViewById(R.id.empezar);
 
@@ -36,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent sig =new Intent(MainActivity.this, Ruleta.class);
+                session.setusename("USERNAME");
+
                 startActivity(sig);
             }
         });
