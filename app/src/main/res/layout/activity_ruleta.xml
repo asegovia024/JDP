@@ -22,52 +22,64 @@
 
     <include layout="@layout/content_ruleta" /> -->
 
-    <ImageView
-        android:id="@+id/ruletaExterior"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.4"
-        android:scaleType="centerInside"
-
-        app:srcCompat="@drawable/exterior"
-
-    />
-
- <ImageView
-     android:id="@+id/ruletaInterior"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_centerHorizontal="true"
-     android:layout_centerVertical="true"
-     app:srcCompat="@drawable/interior" />
-
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/girar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:scaleType="center"
-        app:srcCompat="@android:drawable/ic_menu_rotate" />
-
-    <Button
-        android:id="@+id/button"
+    <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/colorAccent"
-        android:text="¡Hecho!" />
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/ruletaExterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/exterior"
+        />
+
+
+        <ImageView
+            android:id="@+id/ruletaInterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/interior"
+            android:gravity="center"
+            />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/girar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@android:drawable/ic_menu_rotate"
+            android:gravity="center"
+            />
+
+
+    </FrameLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent"
+            android:text="¡Hecho!" />
+
 
     <TextView
         android:id="@+id/texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/girar"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="38dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="19dp"
         android:text="TextView" />
 
 
